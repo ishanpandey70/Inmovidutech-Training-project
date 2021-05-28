@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Page</title>
+    <link rel="stylesheet" type="text/css" href="billing.css">
+</head>
+<body>
+    <!--HTML FORM CLASS-->
+<div class="html_form">
+    <form onsubmit="return validation()" name="submit-googlesheet" method="POST">
+      
+      
+      
+      
+      <h2> Address Form</h2>
+      <label>Name</label>
+    <input type="text" name="Name" id="name" placeholder="Name"><br>
+    <span id="errorname" style="color: red; font-size: 10px;"></span><!--Shows error message-->
+    
+    <label>Email</label>
+    <input type="email" name="Email Id" id="email" placeholder="email" ><br>
+    <span id="erroremail" style="color: red; font-size: 10px;"></span><!--Shows error message-->
+    
+    <label>Contact Number</label>
+    <input type="number" name="Number" id="number" placeholder="Contact Number"><br>
+    <span id="errornumber" style="color: red; font-size: 10px;"></span><!--Shows error message-->
+    
+    <label>Address</label>
+    <input type="text" name="add" id="add" placeholder="Address"><br>
+    <span id="erroradd" style="color: red; font-size: 10px;"></span><!--Shows error message-->
+    
+
+    
+   
+    
+    
+    
+    <br>
+    <a href="billing.html">
+    <button type="submit">Submit</button>
+</a>
+    <button type="reset">reset</button>
+    
+    </form>
+    
+    </div>
+    <script type="text/javascript"> 
+
+        function validation(){
+            
+            var username = document.getElementById('name').value;
+            var email= document.getElementById('email').value;
+            var number= document.getElementById('number').value;
+            var add = document.getElementById('add').value;
+
+            var namecheck= /^[A-Za-z ]{3,30}$/;   //A-Z and a-z allowed size min 3 and max 50 charerctors ,syntax imp as opening with \^ and closing with $/
+            var emailcheck= /^[A-Za-z 0-9._]{3,}@[A-Za-z0-9]{3,}[.]{1}[A-Za-z.]{2,6}$/;//[.]{1} isliye because udhar ek hi baar . aayega but that is optional if it is once like we say in @,upper limit not defined chod sakte hai
+            var numbercheck=/^[6789][0-9]{9}$/;
+            var addcheck= /^[A-Za-z0-9 ]{3,}$/;   //A-Z and a-z allowed size min 3 and max 50 charerctors ,syntax imp as opening with \^ and closing with $/
+            
+           
+        
+        
+        
+        
+           if(namecheck.test(username))
+        {
+            document.getElementById('errorname').innerHTML=" ";
+        }
+        else{
+            document.getElementById('errorname').innerHTML=" **Invalid Name ";
+            return false;
+        }
+        if(emailcheck.test(email))
+        {
+            document.getElementById('erroremail').innerHTML=" ";
+        }
+        else{
+            document.getElementById('erroremail').innerHTML=" **Invalid email Syntax ";
+            return false;
+        }
+        if(numbercheck.test(number))
+        {
+            document.getElementById('errornumber').innerHTML=" ";
+        }
+        else{
+            document.getElementById('errornumber').innerHTML=" **Invalid Number ";
+            return false;
+        }
+        if(addcheck.test(add))
+        {
+            document.getElementById('erroradd').innerHTML=" ";
+        }
+        else{
+            document.getElementById('erroradd').innerHTML=" **Invalid Address ";
+            return false;
+        
+    }
+  }
+        
+        </script>
+        <script type="text/javascript">
+          const scriptURL = 'https://script.google.com/macros/s/AKfycbwMy1APjSJH9sq4BnMACVO1pk7A7eLfGaKvwbe-86N3H5ncMiNZXiRyWOBpcNnz9w7I/exec'
+          const form = document.forms['submit-googlesheet']
+        
+          form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => alert("Yay! Order Placed"))
+              .catch(error => console.error('Error!', error.message))
+          })
+        
+        
+        
+        
+        </script>
+</body>
+</html>

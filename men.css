@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+}
+.container .card1 {
+ width: 50%;
+        height: 250px;
+        border: 1px solid red;
+        margin: 20px;
+        background-image: url("Mens.jpg") ;
+        background-size: cover;
+        background-position: center;
+       
+}
+.container .card1 .img{
+    width: 100%;
+height: 150px;
+overflow: hidden;
+}
+    .container .card2 {
+        width: 50%;
+        height: 250px;
+        border: 1px solid red;
+        margin: 20px;
+        background-image: url("hehe.jpg") ;
+        background-size: cover;
+        background-position: center;
+       
+
+    }

@@ -1,0 +1,47 @@
+.html_form{
+    border: 2px solid black;
+    padding: 50px;
+    text-align: center;
+}
+.html_form form{
+    width: 40%;
+    text-align: left;
+    border: 5px solid black;
+margin-left: 30%;
+}
+.html_form input{
+    border-width: 100%;
+    margin: 15px;
+    padding:5px;
+    border-radius: 5px;
+  border:none;
+    outline:none;
+    border-bottom:solid 2px rgb(0, 255, 13);
+    
+}
+
+.html_form form button{
+    border-width: 100%;
+    margin: 15px;
+    padding:5px;
+    border-radius: 5px;
+  border: none;
+    outline:none;
+   background-color: orange;
+   color: white;
+   cursor: pointer;
+}
+.html_form form button:hover{
+    background-color: green;
+}
+.html_form form input:hover{
+    border-bottom: 2px solid black;
+}
+.html_form form input:focus{
+    border-bottom: 2px solid blue;
+}
+.html_form form select{
+    border: 2px solid orange;
+   
+    text-align: center;
+}

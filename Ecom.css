@@ -1,0 +1,65 @@
+.menu_bar{
+    float: right;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+background-color: rgb(10, 10, 17);
+}
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: rgb(17, 152, 230);
+    
+ }
+.footer .address{
+    text-align: center;
+    
+}
+.footer .Social{
+    text-align: right;
+    
+}
+ 
+
+
+.logo_img{ 
+    margin: 10px;
+    margin-left: 20px;
+}
+
+.container{
+    display: flex;
+}
+.container .card1 {
+ width: 50%;
+        height: 200px;
+        border: 1px solid red;
+        margin: 20px;
+        background-image: url("Mens.jpg") ;
+        background-size: cover;
+        background-position: center;
+       
+}
+.container .card1 .img{
+   
+
+overflow: hidden;
+}
+    .container .card2 {
+        width: 50%;
+        height: 250px;
+        border: 1px solid red;
+        margin: 20px;
+        background-image: url("hehe.jpg") ;
+        background-size: cover;
+        background-position: center;
+       
+
+    }
+   
+    

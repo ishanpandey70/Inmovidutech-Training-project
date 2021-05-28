@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="billing.css">
+</head>
+<body>
+    <!--HTML FORM CLASS-->
+<div class="html_form">
+    <form onsubmit="return validation()" name="submit-googlesheet" method="POST">
+      
+      
+      
+      
+      <h2> Login</h2>
+  
+    
+    <label>Email</label>
+    <input type="email" name="Email Id" id="email" placeholder="email" ><br>
+    <span id="erroremail" style="color: red; font-size: 10px;"></span><!--Shows error message-->
+    
+
+    Password
+    <input type="password" name="New Password" id="password" placeholder="New Password"><br>
+    <span id="errorpassword" style="color: red; font-size: 10px;"></span><!--Shows error message-->
+
+    
+   
+    
+    
+    
+  
+    <button type="submit">Submit</button>
+</a>
+    <button type="reset">reset</button>
+    <a href="register.html">Register Here</a>
+    
+    </form>
+    
+    </div>
+    <script type="text/javascript"> 
+
+        function validation(){
+            
+          
+            var email= document.getElementById('email').value;
+            var password= document.getElementById('password').value;
+
+          
+            var emailcheck= /^[A-Za-z 0-9._]{3,}@[A-Za-z0-9]{3,}[.]{1}[A-Za-z.]{2,6}$/;//[.]{1} isliye because udhar ek hi baar . aayega but that is optional if it is once like we say in @,upper limit not defined chod sakte hai
+           
+            varpasswordcheck=/^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9_!@#$%^&*]{8,16}$/;//(?=.*[0-9]) shows 0-9 only hai agr then it is not valid
+
+           
+        
+        
+        
+    
+        
+        if(emailcheck.test(email))
+        {
+            document.getElementById('erroremail').innerHTML=" ";
+        }
+        else{
+            document.getElementById('erroremail').innerHTML=" **Invalid email Syntax ";
+            return false;
+        }
+        
+        if(passwordcheck.test(password))
+{
+    document.getElementById('errorpassword').innerHTML=" ";
+}
+else{
+    document.getElementById('errorpassword').innerHTML=" **Atleast 1 uppercase 1 lowercase 1 numeric and 1 special charector ";
+    return false;
+}
+  }
+        
+        
+        
+        </script>
+</body>
+</html>
